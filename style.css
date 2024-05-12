@@ -1,0 +1,129 @@
+/* Definindo variáveis CSS */
+:root {
+    --cor-de-fundo: #153448;
+    --cor2: #3c5b6f;
+    --cor3: #948979;
+    --cor4: #dfd0b8;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-de-fundo);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Estilos para o cabeçalho */
+.menu {
+    background: var(--cor2);
+    color: var(--cor4);
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+    justify-content: center;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.menu a{
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+.menu a:visited{
+    color: var(--cor4);
+}
+
+.nome{
+    color: var(--cor4);
+    font-family: 'Poetsen One', sans-serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    padding: 50px;
+    text-align: center;
+    text-shadow: 10px 10px 15px var(--cor3);
+}
+
+main{
+    padding: 40px 100px;
+}
+
+
+/* Estilos para as seções */
+section{
+    border-bottom: 2px solid var(--cor2);
+    margin: 0 auto;
+    max-width: 80vw;
+    padding: 50px 0;
+}
+
+section h2 {
+    color: var(--cor2);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px var(--cor4);
+}
+
+.informacoes{
+    align-items: center;
+    display: flex;
+    gap: 60px;
+    justify-content: space-evenly;
+}
+
+.foto{
+    border-radius: 50%;
+    height: 200px;
+}
+
+.lista-contatos{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.lista-contatos div{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.lista-contatos img{
+    width: 30px;
+}
+
+.lista-contatos a{
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+.lista-cursos div{
+    padding: 30px;
+}
+
+.lista-cursos div h3{
+    padding-bottom: 15px;
+}
+
+#experiencia div{
+    padding: 30px;
+}
+
+.retorno{
+    padding: 30px;
+    text-align: center;
+}
+
+.retorno a{
+    color: var(--cor4);
+    text-decoration: none;
+}
