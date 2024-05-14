@@ -46,10 +46,65 @@ body {
     color: var(--cor4);
     font-family: 'Poetsen One', sans-serif;
     font-size: 50px;
-    letter-spacing: 4px;
+    /* letter-spacing: 4px; */
     padding: 50px;
     text-align: center;
-    text-shadow: 10px 10px 15px var(--cor3);
+    text-shadow: 5px 5px 15px var(--cor3);
+}
+
+.nome span{
+    animation: brilho 3.5s ease-in-out infinite;
+}
+
+.nome span:nth-of-type(2){
+    animation-delay: 0.25s;
+}
+.nome span:nth-of-type(3){
+    animation-delay: 0.5s;
+}
+.nome span:nth-of-type(4){
+    animation-delay: 0.75s;
+}
+
+.nome span:nth-of-type(5){
+    animation-delay: 1s;
+}
+
+.nome span:nth-of-type(6){
+    animation-delay: 1.25s;
+}
+.nome span:nth-of-type(7){
+    animation-delay: 1.5s;
+}
+.nome span:nth-of-type(8){
+    animation-delay: 1.75s;
+}
+.nome span:nth-of-type(9){
+    animation-delay: 2s;
+}
+.nome span:nth-of-type(10){
+    animation-delay: 2.25s;
+}
+.nome span:nth-of-type(11){
+    animation-delay: 2.5s;
+}
+.nome span:nth-of-type(12){
+    animation-delay: 2.75s;
+}
+
+
+
+@keyframes brilho{
+    0% {
+        color: var(--cor4);
+        text-shadow: 5px 5px 15px var(--cor2), 5px 5px 50px var(--cor2), 5px 5px 100px var(--cor2);
+    }
+    10%, 90% {
+        color: var(--cor3);
+        /* text-shadow: none; */
+        text-shadow: 2px 2px 5px var(--cor3);
+        
+    }
 }
 
 main{
@@ -79,8 +134,25 @@ section h2 {
 }
 
 .foto{
+    border: 2px solid transparent;
     border-radius: 50%;
     height: 200px;
+    transition: filter 0.3s ease;
+}
+.foto:hover{
+    filter: brightness(80%);
+    border: 2px solid var(--cor4)
+}
+
+
+
+.apresentacao{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.apresentacao p{
+    padding-bottom: 8px;
 }
 
 .lista-contatos{
