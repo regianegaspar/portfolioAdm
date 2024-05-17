@@ -1,188 +1,237 @@
 /* Definindo variáveis CSS */
 :root {
-    --cor-de-fundo: #153448;
-    --cor2: #3c5b6f;
-    --cor3: #948979;
-    --cor4: #dfd0b8;
+  --cor-de-fundo: #153448;
+  --cor2: #3c5b6f;
+  --cor3: #948979;
+  --cor4: #dfd0b8;
 }
 
 /* Estilos gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--cor-de-fundo);
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+  background: var(--cor-de-fundo);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
-
 
 /* Estilos para o cabeçalho */
 
-#inicio{
-    text-align: center;
+#inicio {
+  align-items: center;
+  background: var(--cor2);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 .menu {
-    background: var(--cor2);
+  color: var(--cor4);
+  display: flex;
+  align-items: baseline;
+  font-size: 12px;
+  gap: 30px;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.menu a {
+  color: var(--cor4);
+  text-decoration: none;
+}
+
+/* .menu a:visited{
     color: var(--cor4);
+} */
+
+.saudacao {
+  text-align: center;
+  animation: blur-in-expand 1s linear both;
+}
+
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
+main {
+  padding: 40px 10px;
+}
+
+/* Estilos para as seções */
+section {
+  /* border-bottom: 2px solid var(--cor2); */
+  margin: 0 auto;
+  max-width: 80vw;
+  padding: 50px 0;
+}
+
+/* section h2 {
+  color: var(--cor2);
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px var(--cor4);
+} */
+
+#sobre, #contato, #formacao, #experiencia, #projetos{
+    align-items: flex-start;
+    background-color: #00000026;
     display: flex;
-    align-items: baseline;
-    gap: 30px;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 10px;
     justify-content: center;
-    list-style-type: none;
+    margin-bottom: 50px;
+    /* border: 1px solid var(--cor4); */
+    /* box-shadow: 2px 2px 2px solid black; */
     padding: 20px;
 }
 
-.menu a{
+.nome {
+    animation: tracking-in-expand 1.5s linear both;
     color: var(--cor4);
-    text-decoration: none;
-}
-
-.menu a:visited{
-    color: var(--cor4);
-}
-
-.nome{
-    animation:tracking-in-expand 1.5s linear both;
-    color: var(--cor4);
-    font-family: 'Poetsen One', sans-serif;
-    font-size: 40px;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 25px;
     letter-spacing: 4px;
-    padding: 50px;
-    text-align: center;
     text-shadow: 1px 1px 1px var(--cor3);
-
-}
-
-@keyframes tracking-in-expand{
-    0%{
-        letter-spacing:-.2em;
-        opacity:0;
+  }
+  
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.2em;
+      opacity: 0;
     }
-    40%{
-        opacity:.6;
+    40% {
+      opacity: 0.6;
     }
-    100%{
-        opacity:1;
+    100% {
+      opacity: 1;
     }
+  }
+
+.informacoes {
+  align-items: center;
+  display: flex;
+  gap: 60px;
+  justify-content: space-evenly;
 }
 
-
-main{
-    padding: 40px 100px;
+.foto {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  height: 200px;
+  transition: filter 0.3s ease;
 }
 
-
-/* Estilos para as seções */
-section{
-    border-bottom: 2px solid var(--cor2);
-    margin: 0 auto;
-    max-width: 80vw;
-    padding: 50px 0;
+.foto:hover {
+  filter: brightness(80%);
+  border: 2px solid var(--cor4);
 }
 
-section h2 {
-    color: var(--cor2);
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 1px var(--cor4);
+.apresentacao {
+  text-align: center;
+  padding-bottom: 30px;
 }
 
-.informacoes{
-    align-items: center;
-    display: flex;
-    gap: 60px;
-    justify-content: space-evenly;
+.apresentacao p {
+  padding-bottom: 8px;
 }
 
-.foto{
-    border: 2px solid transparent;
-    border-radius: 50%;
-    height: 200px;
-    transition: filter 0.3s ease;
-}
-.foto:hover{
-    filter: brightness(80%);
-    border: 2px solid var(--cor4)
+.habilidades h3{
+    padding-bottom: 10px;
 }
 
-
-
-.apresentacao{
-    text-align: center;
-    padding-bottom: 30px;
-    
-}
-
-.apresentacao p{
-    padding-bottom: 8px;
-}
-
-.lista-contatos{
+.habilidades ul{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    justify-content: center;
-}
-
-.lista-contatos div{
-    align-items: center;
-    display: flex;
-    gap: 10px;
-}
-
-.lista-contatos img{
-    width: 30px;
-}
-
-.lista-contatos a{
-    color: var(--cor4);
-    text-decoration: none;
-}
-
-.lista-cursos{
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 15px;
 }
 
-.lista-cursos div{
-    width: 30vw;
+.habilidades li{
+    list-style-type: none;
 }
 
-.lista-cursos div h3{
-    padding-bottom: 15px;
+
+.lista-contatos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  
 }
 
-#experiencia div, #projetos div{
-    padding: 30px;
+
+.lista-contatos div {
+  align-items: center;
+  display: flex;
+  gap: 10px;
 }
 
-.retorno{
-    padding: 30px;
-    text-align: center;
+.lista-contatos img {
+  width: 30px;
 }
 
-.retorno a{
-    color: var(--cor4);
-    text-decoration: none;
+.lista-contatos a {
+  color: var(--cor4);
+  text-decoration: none;
+}
+
+.lista-cursos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.lista-cursos div {
+  width: 30vw;
+}
+
+.lista-cursos div h3 {
+  padding-bottom: 15px;
+}
+
+#experiencia div,
+#projetos div {
+  padding: 30px;
+}
+
+.retorno {
+  padding: 30px;
+  text-align: center;
+}
+
+.retorno a {
+  color: var(--cor4);
+  text-decoration: none;
 }
 
 footer {
-    background: var(--cor2);
-    color: var(--cor4);
-    text-align: center;
-    padding: 20px;
+  background: var(--cor2);
+  color: var(--cor4);
+  text-align: center;
+  padding: 20px;
 }
 
-footer a{
-    color: var(--cor4);
-    text-decoration: none;
+footer a {
+  color: var(--cor4);
+  text-decoration: none;
 }
