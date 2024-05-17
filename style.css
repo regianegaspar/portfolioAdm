@@ -235,3 +235,77 @@ footer a {
   color: var(--cor4);
   text-decoration: none;
 }
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .informacoes {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .lista-cursos div {
+      width: 45vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .informacoes {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .foto {
+      height: 150px;
+    }
+  
+    .habilidades ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .lista-cursos div {
+      width: 70vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    #inicio {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu {
+      font-size: 10px;
+    }
+  
+    .informacoes {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .foto {
+      height: 100px;
+    }
+  
+    .habilidades ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .lista-cursos div {
+      width: 90vw;
+    }
+  
+    .saudacao {
+      font-size: 20px;
+    }
+  }
